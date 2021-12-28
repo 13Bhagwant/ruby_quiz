@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaton</title>
+</head>
+<body>
+   <h1 id='heading'>*SARDAAR JI*</h1> 
+   <h2>My new Heading</h2>
+   <h3>Parneet</h3>
+   <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+   </script>
+<script>
+    //for animating Heading
+        let leftOffset=0;
+        let moveHeading=function(){
+            $('#heading').offset({left:
+                leftOffset=leftOffset+10})
+                leftOffset++
+                if (leftOffset>1100){
+                    leftOffset=0;
+                }
+        }
+    setInterval(moveHeading,30);
+    //mouse click
+    let clickHandler=function(event){
+        console.log(`Click! ${event.pageX} ${event.pageY}`);
+    }
+    $('h2').click(clickHandler);
+    //Mouse move event
+    $("html").mousemove(function(event){
+        $("h3").offset({left: event.pageX, top:event.pageY});
+
+    });
+</script>
+</body>
+</html>

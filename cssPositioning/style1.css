@@ -1,0 +1,129 @@
+.shared{
+    font-size: 2em;
+    color: wheat;
+}
+html{
+    background-color: tomato;
+}
+body{
+    background-color: teal;
+    padding: 10px;
+    height: 3000px;
+    /* Adding height to body to test fixed elements */
+}
+
+/* By default all the positions are static  */
+.first-box{
+    background-color: maroon;
+    padding: 10px;
+
+}
+.second-box{
+    background-color: mediumblue;
+    padding: 10px;
+    position: relative;
+    /* top:;right: ; bottom: ; left: ; */
+    /* top: 100px; */
+    left: 10px;
+}
+.third-box{
+    background-color:mediumorchid ;
+    padding: 10px;
+    position: relative;
+    top: 0px;  
+    /* if we use absolute  position it will remove the elememt from the flow of html document and works upon its closes ancestor (or parent) */
+}
+.text-box{
+ color: rgb(0, 0, 0);   
+}
+span.word{
+    position: relative;
+    top: 10px;
+    right: 225px;
+}
+.parent{
+    /* if we dont position this element the top,right,left,bottom properties for the absolute positioned elments iside it will be computed to next nearest ancestor */
+    position: relative;
+}
+   .absolute-positioned {
+    background-color: gray;
+    /* top: 20px; */
+}
+/* Fixed Element */
+.fixed-element{
+    background-color: greenyellow;
+    width: 4em;
+    font-size: 2em;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+.fixed-element:hover{
+    color:rgb(245, 239, 239);
+    background-color: black;
+}
+/* sticky position */
+.sticky{
+    background-color: violet;
+    padding: 5px;
+    position: sticky;
+    top: 10px;
+    width: 50%;
+}
+/* float */
+.float-left{
+    background-color: thistle;
+    float: left;
+}
+.float-right{
+    background-color: bisque;
+    float: right;
+    height: 20px;
+    border: 5px solid black;
+}
+/* z-index */
+.indexed-box1{
+    position: relative;
+    width: 10em;
+    height: 10em;
+    top: 1em;
+    left: 8em;
+    background-color: darkgoldenrod;
+    z-index: 2;
+}
+.inner-box1{
+    position: relative;
+    width: 4em;
+    height: 4em;
+    margin: 1em;
+    background-color: turquoise;z-index: 3;
+}
+.inner-box2{
+    position: relative;
+    width: 4em;
+    height: 4em;
+    /* margin: 1em; */
+    top: -2em;
+    left: 3em;
+    background-color: springgreen;z-index: 4;
+}
+.inner-box3{
+    position: relative;
+    width: 8em;
+    height: 8em;
+    top: -4em;
+    left: 12em;
+    background-color: steelblue;
+    z-index: 1;
+}
+.clear-floating{
+    border: 5px dotted brown;
+    clear: none; /* by default */
+    clear: left; /*clearing according to the floated left element */
+    clear: right; 
+    /* clear: both; /*clearing according to the floated both element */
+    /* clear: inline-start; clearing according to the floated inline-start; element */
+    clear: inline-end; /* clearing according to the floated inline-end; element */
+}
+

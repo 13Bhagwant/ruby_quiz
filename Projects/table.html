@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function()
+      {
+        $('tr').each(function()
+        {
+            var total=0;
+            $(this).find('.Quantity').each(function ()
+            {
+                var marks=$(this).text();
+                if(marks.lenght!=0)
+                {
+                    total+=parseFloat(marks);
+                }
+            });
+            $(this).find('$total').html('= ' +total);
+        });
+      }); 
+
+    </script>
+</head>
+<body>
+    
+    <table border=1 style="text-align: center;">
+        
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Plants</td>
+            <td class="Quantity">100</td>
+            <td class="Price">$23</td>
+            <td id="Total"></td>
+        </tr>
+        <tr>
+            <td>Pineapples</td>
+            <td class="Quantity">25</td>
+            <td class="Price">$20</td>
+            <td id="Total"></td>
+        </tr>
+        <tr>
+            <td>Mobiles</td>
+            <td class="Quantity">10</td>
+            <td class="Price">$2000</td>
+            <td id="Total"></td>
+        </tr>
+    </table>
+    <style> table,tr,th{border:1px solid green}
+    </style>
+</body>
+</html>

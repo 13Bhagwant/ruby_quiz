@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Layout</title>
+    <style>
+        div.main{
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 1fr 3fr 1fr;
+
+        }
+        .main > div {
+          border: none;
+          min-height: 50px;
+          padding: 1em;
+        }
+       .main > .header,.footer{
+            background-color:cadetblue;
+            color: white;
+            grid-column: 1/4;
+            text-align: center;
+
+        }
+        .main > .sidebar{
+            background-color: coral;   
+                        }
+        .main > .right{
+            background-color: darkgoldenrod;
+                      }
+     
+            /* Below is the stertch part solution */
+            @media(max-width: 768px){
+                .main{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    min-height: 100vh;
+                }
+                .right,.sidebar,.content{
+                    grid-column: span 3;
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header"><h2> Header Section </h2></div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content"><h2>Content </h2> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quos doloremque sunt neque officia sapiente numquam eveniet eos iusto repellat dignissimos impedit, mollitia at debitis explicabo, aliquam commodi distinctio veritatis!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quaerat dolorum incidunt asperiores recusandae cum pariatur modi dignissimos eum animi commodi beatae, rem aliquam eaque explicabo reprehenderit obcaecati repellendus. Sequi?lorem200</p></div>
+        <div class="right"><i>Right Section</i></div>
+        <div class="footer"><h2>Footer</h2></div>
+    </div>
+</body>
+</html>

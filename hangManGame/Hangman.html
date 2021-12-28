@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hangman</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Please Enter Your Name?");
+        alert("HELLO!!!!!!!! " + name);
+        let animals = ['lion', 'monkey', 'elephant', 'dog', 'cat', 'tiger','cheeta','tiger','panda','pig','horse'];
+        let animal = animals[Math.floor(Math.random()* animals.length)];
+        let count=animal.length+2;
+        let answerArray = [];
+        for (let i = 0; i < animal.length; i++) {
+           answerArray[i] = "_ ";
+        }
+        let incorrectWords=[];
+         let remainingWords = animal.length;
+         
+         
+         while (remainingWords > 0) {
+             alert(answerArray.join(''));
+             let guess = prompt("Guess a letter ");
+             guess=guess.toLowerCase();
+             if (guess === null) {
+                 Break;
+             }             else if (count===0){
+                 alert("loose");
+                 break;
+             }
+              else if (guess.length !== 1) {
+                 alert('Please Enter a One Letter');
+             }
+             else if (!animal.includes(guess)){
+                         incorrectWords.push(guess);
+                        alert("You Are Entered Wrong Letter: "+incorrectWords)
+                       count--;
+                    }else if(answerArray.includes(guess)){
+                        alert('You Already Guessed the word')
+                    }
+                    else if(remainingWords.includes(guess)){
+                        alert('You Already Guessed the word')
+                    }
+                    else {
+                 for (let j = 0; j < animal.length; j++) {
+                    if (animal[j] ===guess) {
+                        answerArray[j] = guess;
+                         remainingWords--;
+                         count--;
+                    }
+                    }
+                 }
+            }
+
+        if (remainingWords===0){
+            alert(answerArray.join(''));
+        alert("Good job You Guessed the Correct animal name " + animal);
+        }
+       
+        </script>
+</body>
+</html>

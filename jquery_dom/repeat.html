@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="headingElement">Good Luck</h1>
+    <!-- <h2 id="headingElement2">The boss</h2> -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur magni eligendi ex eos porro laudantium ullam nihil quae id! Provident in veniam iusto fugiat eum voluptate sed iure et eveniet?</p>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+      $('p').slideUp(1000);
+    let time=1000;
+      for(let i=0;i<5;i++){  $('h1').fadeOut(time)
+      $('h1').fadeIn(time)
+        time=time + 1000;
+        }
+    </script>
+</body>
+</html>

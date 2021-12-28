@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <style>
+        /* *{
+            border: 1px solid black;
+        } */
+          .main {
+
+          border: none;
+          min-height: 50px;
+          padding: 1em;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 100px 100px ;
+          grid-gap: 1em 2em;
+
+          
+        }
+        .sidebar{
+            background-color: teal;
+            align-self: flex-start;
+            grid-area: 1/1/9/1;
+            min-height: 300px;
+            
+        }
+        .box1,.box2,.box3,.box4{
+            background-color: rgb(95, 184, 11);
+            grid-template-rows: 50px;
+            grid-template-columns: 200px 1fr 100px; 
+       
+
+                       
+        }
+        .small{
+            display: grid;
+            grid-template-columns: repeat(4.1fr);
+            align-items: end;
+
+        }
+        .box5{
+            background-color: darkolivegreen;
+          /* justify-self: start; */
+          
+        
+        }
+        .box6{
+            background-color: aqua;;
+          /* justify-self: end; */
+        }
+        .box7{
+            background-color: aquamarine;
+          /* justify-self: start; */
+        }
+        .box8{
+            background-color: rgb(180, 30, 30);
+          /* justify-self: end */
+          
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1><center> PRODUCTS + FILTERS</center></h1>
+    <div class="main">
+        <div class="sidebar">sidebar</div>
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="small">
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+    </div>
+    </div>
+</body>
+</html>

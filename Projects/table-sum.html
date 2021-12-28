@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" style="text-align: center;">
+    <thead>
+       <tr>
+          <th>Name</th>
+          <th>math</th>
+          <th>ssfd</th>
+       </tr> 
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bhagwant</td>
+            <td class="subjects">100</td>
+            <td class="subjects">200</td>
+        </tr>
+        <tr>
+            <td>Cherry</td>
+            <td class="subjects">9009</td>
+            <td class="subjects">200</td>
+        </tr>
+        <tr>
+            <td>Tarashveer</td>
+            <td class="subjects">100</td>
+            <td class="subjects">200</td>
+        
+        <tr>
+            <td>Total:</td>
+            <td id='sums' type='sum'></td>
+            <td id='sum' type='sum'></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+    <button onclick="sum()"> <strong>Totals</strong></button>
+    <button onclick="sums()"> <strong>Total</strong></button>
+    <script>
+        function sum() {
+            let rows = document.querySelectorAll("table tr td:last-child");
+            let sum = 0;
+            for (let i = 0; i < rows.length-1; i++) {
+                sum += Number(rows[i].textContent);
+            }
+     
+            document.getElementById("sum").textContent = sum;
+        };
+
+        function sums() {
+            let row = document.querySelectorAll("table tr td:nth-last-child(2)");
+            let sums = 0;
+            for (let i= 0; i < row.length-1; i++) {
+                sums += Number(row[i].textContent);
+            }
+     
+            document.getElementById("sums").textContent = sums;
+        }
+    </script>   
+</body>
+</html>

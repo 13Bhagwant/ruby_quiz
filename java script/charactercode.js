@@ -1,0 +1,12 @@
+let a = String.fromCharCode(189);
+let b = String.fromCharCode(43);
+let c = String.fromCharCode(190);
+let d = String.fromCharCode(143);
+let result = a + " " + b + " " + c + " " + d;
+console.log(result);
+let aa = String.fromCharCode(process.argv[2]);
+let bb = String.fromCharCode(process.argv[3]);
+let cc= String.fromCharCode(process.argv[4]);
+let dd = String.fromCharCode(process.argv[5]);
+let result1 = aa + " " + bb + " " + cc + " " + dd;
+console.log(result1);

@@ -1,0 +1,72 @@
+.app-container > .items {
+    background-color: gray;
+    width: 10em;
+    height: 5em;
+}
+
+.app-container > .items:nth-child(even){
+    height: 10em;
+    width: 15em;
+}
+
+.app-container{
+    /* This defines a flex container; inline or block depending on the given value . It enables a flex context for all ots direct children  */
+    display: flex;
+    /* This estabilishes the main-axis
+    flex-direction: row| row-reverse| coloum | cloumn reverse; 
+    row is the deafault one =>left to right in ltr
+    row-reverse =>right to left horizontally (rtl)
+    cloumn : same as row but top to bottom
+    cloumn-reverse => same as row-reverse but ,bottom to top*/
+    flex-direction:row;
+
+    /* 
+    flex-wrap: nowrap|wrap|wrap-reverse;
+    wrap: flex items will wrap onto multiple lines, from top to bottom.
+    wrap-reverse:flex items will wrap onto multiple lines from bottom to top
+     */
+     flex-wrap: wrap;
+     /* shorthand for flex-direction & flex-wrap */
+     /* flex-flow: <flex-direction>|| <flex-wrap>; */
+     /* justify-content: flex-start | flex-end | center | space-around | space-evenly | ...; */
+     /* 
+        flex-start: (defalut):items are packed toward the start of the flex-direction
+        flex-end: items are packed toward the end of the flex-direction: ;
+        start: items are packed toward the start of the writing-mode direction.
+        end:items are packed toward the end of the writing-mode direction.
+        left:behave as start // towards left edge
+        right:items area packed toward right edge of the container , unless that dosent make sense with the flex-direction, then it behaves like start.
+        center: items are packed centered along the line.
+        space-between:items are evely distributed in the line;first item on the start line,last item on the end line
+        space-around:items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal on both sides. The first item wall have one unit of space against the container edge,but two units of space between the next item because
+        that next item has its own spacing that applis.
+        space-evenlyL items are distributed so that the spacing between any two items (and the space to the edges)is equal
+     */
+     justify-content: space-evenly;
+
+     /* Align Items */
+     /* align-items: strech | felx-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end ... safe | unsfe; */
+     /* strech:(default) stretch to fill the cottainer (still resepect min-width: ;) */
+
+     align-items: center;
+
+     /* Align Content */
+     /* similar to justify content but,we need ti have more than one row to see the effect  */
+     /* allign-content: flex-start | flex-end | sapce-between | space-around | space-evenly | stretch | start |end | baseline |first-baseline  | last base file | ....safe | unsafe */
+
+     /* flex-start/start :items packed to the start of the container . The (more supported)flex-start honors the flex-direction while start honors the writing mode directions. */
+     /* flex-end/end : items packed to the end of the container .The (more supported)flex-end honors the flex-direction while start honors the writing mode directions. */
+     /* center: items centered */
+     /* space-between:items are evely distributed in the line;first line on the start line,last item on the end  */
+     /* space-evenly:items are evenly distributed with equal space around them */
+     flex-direction:row;
+     align-content: space-between;
+}
+.app-container > .items:last-child{
+    background-color: aqua;
+    align-self: flex-end;
+}
+.app-container > .items:first-child{
+    background-color: black;
+    align-self: flex-start;
+}

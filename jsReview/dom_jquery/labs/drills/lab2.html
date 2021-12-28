@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("fn").value;
+    }
+    function showInput() {
+        document.getElementById('ls').innerHTML = 
+                    document.getElementById("ln").value;
+    }
+    function showInput() {
+        document.getElementById('em').innerHTML = 
+                    document.getElementById("email").value;
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form>
+    <label for="fn"><b></b></label>
+    <input type="text" placeholder="FirstName" id="fn">
+    <label for="ln"></label>
+    <input type="text" placeholder="LastName" id="ln">
+    <label for="email"></label>
+    <input type="email" placeholder="Email" id="email">
+  <input type="submit" onclick="showInput(1000
+  );">
+</form>
+
+  <label></label>
+  <p><span id='display'></span></p>
+  <label></label>
+  <p><span id='ls'></span></p>
+  <label></label>
+  <p><span id='em'></span></p>
+</body>
+</html>
